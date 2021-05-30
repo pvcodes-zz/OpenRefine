@@ -13,7 +13,7 @@ For the `suggest` entry point, it is important to balance speed versus accuracy.
 
 Similarly, for the `flyout` entry point, it is important to respond quickly while providing enough essential details so that the user can visually check if the highlighted entity is the desired one. You probably would want to embed a thumbnail image, as we have found that images are excellent for visual identification.
 
-## suggest Entry Point
+## suggest Entry Point {#suggest-entry-point}
 
 The `suggest` entry point takes the following URL parameters
 
@@ -56,7 +56,7 @@ The Suggest API should return results as JSON (JSONP must also be supported). Th
 
 Here is an example of a minimal request and response using the Suggest API layered over [Wikidata](https://www.wikidata.org):
 
-URL: https://wikidata.reconci.link/en/suggest/entity?prefix=A5
+URL: https://tools.wmflabs.org/openrefine-wikidata/en/suggest/entity?prefix=A5
 JSON response:
 
 ```json
@@ -82,13 +82,13 @@ JSON response:
 }
 ```
 
-## flyout Entry Point
+## flyout Entry Point {#flyout-entry-point}
 
 The `flyout` entry point takes a single URL parameter: `id`, which is the identifier of the entity to render, as a string. It also takes a `callback` parameter to support JSONP. It returns a JSON object literal with a single field: `html`, which is the rendered view of the given entity. 
 
 Here is an example of a minimal request and response using the Suggest API layered over [[Wikidata](https://www.wikidata.org) with only the required fields in each case:
 
-URL: https://wikidata.reconci.link/en/flyout/entity?id=Q786288
+URL: https://tools.wmflabs.org/openrefine-wikidata/en/flyout/entity?id=Q786288
 JSON response:
 
 ```json
